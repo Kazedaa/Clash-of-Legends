@@ -163,10 +163,24 @@ class Fighter extends Sprite{
                     this.currentFrames = 0
                 }
                 break
+                case "idle_left":
+                    if(this.imageSrc!==this.sprites.idle_left.imageSrc){
+                        this.imageSrc = this.sprites.idle_left.imageSrc
+                        this.frames = this.sprites.idle_left.frames
+                        this.currentFrames = 0
+                    }
+                    break
             case "run":
                 if(this.imageSrc!==this.sprites.run.imageSrc){
                     this.imageSrc = this.sprites.run.imageSrc
                     this.frames = this.sprites.run.frames
+                    this.currentFrames = 0
+                }
+                break
+            case "run_left":
+                if(this.imageSrc!==this.sprites.run_left.imageSrc){
+                    this.imageSrc = this.sprites.run_left.imageSrc
+                    this.frames = this.sprites.run_left.frames
                     this.currentFrames = 0
                 }
                 break
@@ -188,6 +202,13 @@ class Fighter extends Sprite{
                 if(this.imageSrc!==this.sprites.attack.imageSrc){
                     this.imageSrc = this.sprites.attack.imageSrc
                     this.frames = this.sprites.attack.frames
+                    this.currentFrames = 0
+                }
+                break
+            case "attack_left":
+                if(this.imageSrc!==this.sprites.attack_left.imageSrc){
+                    this.imageSrc = this.sprites.attack_left.imageSrc
+                    this.frames = this.sprites.attack_left.frames
                     this.currentFrames = 0
                 }
                 break

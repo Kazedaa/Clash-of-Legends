@@ -13,9 +13,9 @@ function winner({player,enemy,timerId}){
     if (player.health===enemy.health){
         document.querySelector("#gameOver").innerHTML = "Tie"
     }else if(player.health > enemy.health){
-        document.querySelector("#gameOver").innerHTML = "Player Wins!!!"
+        document.querySelector("#gameOver").innerHTML = "Ka'Ali Wins!!!"
     }else if(player.health < enemy.health){
-        document.querySelector("#gameOver").innerHTML = "Enenmy Wins!!!"
+        document.querySelector("#gameOver").innerHTML = "Ha'An Wins!!!"
     }
 }
 

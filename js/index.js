@@ -34,8 +34,16 @@ const player = new Fighter({
             imageSrc:'./WindFighter/PNG/idle/idle_',
             frames:8
         },
+        idle_left:{
+            imageSrc:'./WindFighter/PNG/idle_left/idle_',
+            frames:8
+        },
         run:{
             imageSrc:'./WindFighter/PNG/run/run_',
+            frames:8
+        },
+        run_left:{
+            imageSrc:'./WindFighter/PNG/run_left/run_',
             frames:8
         },
         j_down:{
@@ -48,6 +56,10 @@ const player = new Fighter({
         },
         attack:{
             imageSrc:'./WindFighter/PNG/1_atk/1_atk_',
+            frames:6
+        },
+        attack_left:{
+            imageSrc:'./WindFighter/PNG/1_atk_left/1_atk_',
             frames:6
         },
         react:{
@@ -81,8 +93,16 @@ const enemy = new Fighter({
             imageSrc:'./MetalFighter/PNG/01_idle/01_idle_',
             frames:8
         },
+        idle_left:{
+            imageSrc:'./MetalFighter/PNG/01_idle_left/01_idle_',
+            frames:8
+        },
         run:{
             imageSrc:'./MetalFighter/PNG/02_run/02_run_',
+            frames:8
+        },
+        run_left:{
+            imageSrc:'./MetalFighter/PNG/02_run_left/02_run_',
             frames:8
         },
         j_down:{
@@ -95,6 +115,10 @@ const enemy = new Fighter({
         },
         attack:{
             imageSrc:'./MetalFighter/PNG/07_1_atk/07_1_atk_',
+            frames:6
+        },
+        attack_left:{
+            imageSrc:'./MetalFighter/PNG/07_1_atk_left/07_1_atk_',
             frames:6
         },
         react:{
@@ -140,13 +164,16 @@ function runGame(){
 
     //player movement
     player.velocity.x = 0
-    player.switchSprite("idle")
+    if (player.facing===1)player.switchSprite("idle")
+    else player.switchSprite("idle_left")
     if (keys.a.pressed && player.lastKey==='a'){
         player.velocity.x = -5
-        player.switchSprite("run")
+        if (player.facing===1)player.switchSprite("run")
+        else player.switchSprite("run_left")
     }else if (keys.d.pressed && player.lastKey==='d') {
         player.velocity.x = 5
-        player.switchSprite("run")
+        if (player.facing===1)player.switchSprite("run")
+        else player.switchSprite("run_left")
     }
     if (player.velocity.y < 0){
         player.switchSprite("j_up")
@@ -156,13 +183,16 @@ function runGame(){
 
     //enemy movement
     enemy.velocity.x = 0
-    enemy.switchSprite("idle")
+    if (enemy.facing===1)player.switchSprite("idle")
+    else enemy.switchSprite("idle_left")
     if (keys.ArrowLeft.pressed && enemy.lastKey==='ArrowLeft'){
         enemy.velocity.x = -5
-        enemy.switchSprite("run")
+        if (enemy.facing===1)player.switchSprite("run")
+        else enemy.switchSprite("run_left")
     }else if (keys.ArrowRight.pressed && enemy.lastKey==='ArrowRight') {
         enemy.velocity.x = 5
-        enemy.switchSprite("run")
+        if (enemy.facing===1)player.switchSprite("run")
+        else enemy.switchSprite("run_left")
     }
     if (enemy.velocity.y < 0){
         enemy.switchSprite("j_up")
