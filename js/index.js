@@ -83,7 +83,7 @@ const enemy = new Fighter({
     position:{x:900,y:0},
     velocity:{x:0,y:10},
     offset:{x:400,y:228},
-    imageSrc:'./MetalFighter/PNG/01_idle/01_idle_',
+    imageSrc:'./MetalFighter/PNG/01_idle_left/01_idle_',
     isAnimatable:true,
     animationSpeed:10,
     scale:3,
