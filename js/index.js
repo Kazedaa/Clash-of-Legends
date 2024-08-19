@@ -183,7 +183,7 @@ function runGame(){
 
     //enemy movement
     enemy.velocity.x = 0
-    if (enemy.facing===1)player.switchSprite("idle")
+    if (enemy.facing===1)enemy.switchSprite("idle")
     else enemy.switchSprite("idle_left")
     if (keys.ArrowLeft.pressed && enemy.lastKey==='ArrowLeft'){
         enemy.velocity.x = -5
@@ -191,7 +191,7 @@ function runGame(){
         else enemy.switchSprite("run_left")
     }else if (keys.ArrowRight.pressed && enemy.lastKey==='ArrowRight') {
         enemy.velocity.x = 5
-        if (enemy.facing===1)player.switchSprite("run")
+        if (enemy.facing===1)enemy.switchSprite("run")
         else enemy.switchSprite("run_left")
     }
     if (enemy.velocity.y < 0){

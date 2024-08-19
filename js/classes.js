@@ -137,7 +137,9 @@ class Fighter extends Sprite{
     }
 
     attack(){
-        this.switchSprite("attack")
+        if (this.facing===1)this.switchSprite("attack")
+        else this.switchSprite("attack_left")
+        // this.switchSprite("attack")
         this.isAttacking = true
     }
 
