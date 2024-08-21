@@ -213,7 +213,7 @@ function runGame(){
         else enemy.switchSprite("run_left")
     }
     if (enemy.velocity.y < 0){
-        if(enemy.facing===1)enemy.switchSprite("j_up")
+        if(enemy        .facing===1)enemy.switchSprite("j_up")
         else enemy.switchSprite("j_up_left")
     }else if (enemy.velocity.y > 0){
         if(enemy.facing===1)enemy.switchSprite("j_down")
