@@ -4,6 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Fighter</title>
@@ -16,29 +17,29 @@
 </head>
 <body>
     <audio autoplay="autoplay" loop="loop" src="bg.mp3"></audio>
-    <div style="position: relative;display: inline-block;">
+    <div id = "game-canvas">
         <!--Health Bar-->
-        <div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px">
+        <div id = "health-bar">
             <!--Player Health-->
-            <div style="position: relative; width: 100%;display:flex;justify-content: flex-end;border:4px solid white;border-right-width: 0px;">
-                <div style="background-color: rgb(255, 131, 131); height: 30px;width:100%"></div>
+            <div id = "health" style="border-right-width: 0px;"> <!--display:flex;justify-content: flex-end;-->
+                <div id = "inner-health"></div> <!--style="width:100%"-->
                 <div id = "playerHealth" style="position: absolute; background: rgb(212, 136, 212); top: 0; bottom: 0;right: 0;width:100%"></div>
             </div>
             <!--Timer-->
-            <div id ="timer" style="background-color: purple; height: 50px; width: 100px;flex-shrink: 0;display: flex;align-items: center;justify-content: center;border:4px solid white;color: white;"></div>
+            <div id ="timer"></div>
             <!--Enemy Health-->
-            <div style="position: relative; width: 100%;border:4px solid white;border-left-width: 0px;">
-                <div style="background-color: rgb(255, 131, 131); height: 30px;"></div>
+            <div id = "health" style="border-left-width: 0px;">
+                <div id = "inner-health"></div>
                 <div id = "enemyHealth" style="position: absolute; background: rgb(212, 136, 212); top: 0; bottom: 0;right: 0;left: 0;"></div>
             </div>
         </div>
-        <div style="position: absolute;top:58px;left:380px;margin:10px;border:2px solid rgb(50, 0, 75);">
-            <img src = "./WindFighter/wind_hashashin.png">
+        <div id = "char-icon" style = "left:380px;">
+            <img src = "./Assets/WindFighter/wind_hashashin.png">
         </div>
-        <div style="position: absolute;top:58px;left:555px;margin:10px;border:2px solid rgb(50, 0, 75);">
-            <img src = "./MetalFighter/metal_bladekeeper.png">
+        <div id = "char-icon" style="left:555px;">
+            <img src = "./Assets/MetalFighter/metal_bladekeeper.png">
         </div>
-        <div id="gameOver" style="position: absolute; color: rgb(227, 85, 255); justify-content: center;align-items: center;top:0;bottom:0;right:0;left:0;display:none;font-size: 50px"></div>
+        <div id="gameOver"></div>
         <canvas></canvas>
     </div>
 

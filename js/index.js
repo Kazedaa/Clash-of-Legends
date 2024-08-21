@@ -8,12 +8,12 @@ c.fillRect(0,0,canvas.width,canvas.height)
 
 const background = new Sprite({
     position:{x:0,y:0},
-    imageSrc:'./BackGrounds/background.png'
+    imageSrc:'./Assets/BackGrounds/background.png'
 })
 
 const shop = new Sprite({
     position:{x:600,y:128},
-    imageSrc:'./BackGrounds/shop.png',
+    imageSrc:'./Assets/BackGrounds/shop.png',
     scale:2.75,
     frames:6,
     isAnimatable: true,
@@ -24,50 +24,50 @@ const player = new Fighter({
     position:{x:50,y:0},
     velocity:{x:0,y:10},
     offset:{x:400,y:228},
-    imageSrc:'./WindFighter/PNG/idle/idle_',
+    imageSrc:'./Assets/WindFighter/PNG/idle/idle_',
     isAnimatable:true,
     animationSpeed:10,
     scale:3,
     frames:8,
     sprites:{
         idle:{
-            imageSrc:'./WindFighter/PNG/idle/idle_',
+            imageSrc:'./Assets/WindFighter/PNG/idle/idle_',
             frames:8
         },
         idle_left:{
-            imageSrc:'./WindFighter/PNG/idle_left/idle_',
+            imageSrc:'./Assets/WindFighter/PNG/idle_left/idle_',
             frames:8
         },
         run:{
-            imageSrc:'./WindFighter/PNG/run/run_',
+            imageSrc:'./Assets/WindFighter/PNG/run/run_',
             frames:8
         },
         run_left:{
-            imageSrc:'./WindFighter/PNG/run_left/run_',
+            imageSrc:'./Assets/WindFighter/PNG/run_left/run_',
             frames:8
         },
         j_down:{
-            imageSrc:'./WindFighter/PNG/j_down/j_down_',
+            imageSrc:'./Assets/WindFighter/PNG/j_down/j_down_',
             frames:3
         },
         j_up:{
-            imageSrc:'./WindFighter/PNG/j_up/j_up_',
+            imageSrc:'./Assets/WindFighter/PNG/j_up/j_up_',
             frames:3
         },
         attack:{
-            imageSrc:'./WindFighter/PNG/1_atk/1_atk_',
+            imageSrc:'./Assets/WindFighter/PNG/1_atk/1_atk_',
             frames:6
         },
         attack_left:{
-            imageSrc:'./WindFighter/PNG/1_atk_left/1_atk_',
+            imageSrc:'./Assets/WindFighter/PNG/1_atk_left/1_atk_',
             frames:6
         },
         react:{
-            imageSrc:'./WindFighter/PNG/take_hit/take_hit_',
+            imageSrc:'./Assets/WindFighter/PNG/take_hit/take_hit_',
             frames:6
         },
         death:{
-            imageSrc:'./WindFighter/PNG/death/death_',
+            imageSrc:'./Assets/WindFighter/PNG/death/death_',
             frames:19
         },
     },
@@ -83,50 +83,50 @@ const enemy = new Fighter({
     position:{x:900,y:0},
     velocity:{x:0,y:10},
     offset:{x:400,y:228},
-    imageSrc:'./MetalFighter/PNG/01_idle_left/01_idle_',
+    imageSrc:'./Assets/MetalFighter/PNG/01_idle_left/01_idle_',
     isAnimatable:true,
     animationSpeed:10,
     scale:3,
     frames:8,
     sprites:{
         idle:{
-            imageSrc:'./MetalFighter/PNG/01_idle/01_idle_',
+            imageSrc:'./Assets/MetalFighter/PNG/01_idle/01_idle_',
             frames:8
         },
         idle_left:{
-            imageSrc:'./MetalFighter/PNG/01_idle_left/01_idle_',
+            imageSrc:'./Assets/MetalFighter/PNG/01_idle_left/01_idle_',
             frames:8
         },
         run:{
-            imageSrc:'./MetalFighter/PNG/02_run/02_run_',
+            imageSrc:'./Assets/MetalFighter/PNG/02_run/02_run_',
             frames:8
         },
         run_left:{
-            imageSrc:'./MetalFighter/PNG/02_run_left/02_run_',
+            imageSrc:'./Assets/MetalFighter/PNG/02_run_left/02_run_',
             frames:8
         },
         j_down:{
-            imageSrc:'./MetalFighter/PNG/03_jump_down/03_jump_down_',
+            imageSrc:'./Assets/MetalFighter/PNG/03_jump_down/03_jump_down_',
             frames:3
         },
         j_up:{
-            imageSrc:'./MetalFighter/PNG/03_jump_up/03_jump_up_',
+            imageSrc:'./Assets/MetalFighter/PNG/03_jump_up/03_jump_up_',
             frames:3
         },
         attack:{
-            imageSrc:'./MetalFighter/PNG/07_1_atk/07_1_atk_',
+            imageSrc:'./Assets/MetalFighter/PNG/07_1_atk/07_1_atk_',
             frames:6
         },
         attack_left:{
-            imageSrc:'./MetalFighter/PNG/07_1_atk_left/07_1_atk_',
+            imageSrc:'./Assets/MetalFighter/PNG/07_1_atk_left/07_1_atk_',
             frames:6
         },
         react:{
-            imageSrc:'./MetalFighter/PNG/12_take_hit/12_take_hit_',
+            imageSrc:'./Assets/MetalFighter/PNG/12_take_hit/12_take_hit_',
             frames:6
         },
         death:{
-            imageSrc:'./MetalFighter/PNG/13_death/13_death_',
+            imageSrc:'./Assets/MetalFighter/PNG/13_death/13_death_',
             frames:6
         },
     },
