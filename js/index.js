@@ -50,8 +50,16 @@ const player = new Fighter({
             imageSrc:'./Assets/WindFighter/PNG/j_down/j_down_',
             frames:3
         },
+        j_down_left:{
+            imageSrc:'./Assets/WindFighter/PNG/j_down_left/j_down_',
+            frames:3
+        },
         j_up:{
             imageSrc:'./Assets/WindFighter/PNG/j_up/j_up_',
+            frames:3
+        },
+        j_up_left:{
+            imageSrc:'./Assets/WindFighter/PNG/j_up_left/j_up_',
             frames:3
         },
         attack:{
@@ -111,6 +119,14 @@ const enemy = new Fighter({
         },
         j_up:{
             imageSrc:'./Assets/MetalFighter/PNG/03_jump_up/03_jump_up_',
+            frames:3
+        },
+        j_down_left:{
+            imageSrc:'./Assets/MetalFighter/PNG/03_jump_down_left/03_jump_down_',
+            frames:3
+        },
+        j_up_left:{
+            imageSrc:'./Assets/MetalFighter/PNG/03_jump_up_left/03_jump_up_',
             frames:3
         },
         attack:{
@@ -176,9 +192,11 @@ function runGame(){
         else player.switchSprite("run_left")
     }
     if (player.velocity.y < 0){
-        player.switchSprite("j_up")
+        if(player.facing===1)player.switchSprite("j_up")
+        else player.switchSprite("j_up_left")
     }else if (player.velocity.y > 0){
-        player.switchSprite("j_down")
+        if(player.facing===1)player.switchSprite("j_down")
+        else player.switchSprite("j_down_left")
     }
 
     //enemy movement
@@ -195,9 +213,11 @@ function runGame(){
         else enemy.switchSprite("run_left")
     }
     if (enemy.velocity.y < 0){
-        enemy.switchSprite("j_up")
+        if(enemy.facing===1)enemy.switchSprite("j_up")
+        else enemy.switchSprite("j_up_left")
     }else if (enemy.velocity.y > 0){
-        enemy.switchSprite("j_down")
+        if(enemy.facing===1)enemy.switchSprite("j_down")
+        else enemy.switchSprite("j_down_left")
     }
 
     //enemy collision detection

@@ -208,6 +208,20 @@ class Fighter extends Sprite{
                     this.currentFrames = 0
                 }
                 break
+            case "j_up_left":
+                if(this.imageSrc!==this.sprites.j_up_left.imageSrc){
+                    this.imageSrc = this.sprites.j_up_left.imageSrc
+                    this.frames = this.sprites.j_up_left.frames
+                    this.currentFrames = 0
+                }
+                break
+            case "j_down_left":
+                if(this.imageSrc!==this.sprites.j_down_left.imageSrc){
+                    this.imageSrc = this.sprites.j_down_left.imageSrc
+                    this.frames = this.sprites.j_down_left.frames
+                    this.currentFrames = 0
+                }
+                break
             case "attack":
                 if(this.imageSrc!==this.sprites.attack.imageSrc){
                     this.imageSrc = this.sprites.attack.imageSrc
