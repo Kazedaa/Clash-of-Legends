@@ -1,6 +1,26 @@
+body{
+    background-color: rgb(191, 127, 204);
+    margin:0px;
+}
+
+#heading{
+    background-color: rgb(191, 127, 204);
+    height: 100px;
+    text-align: center;
+    font-size: 50px;
+    align-content: center;
+}
+
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #game-canvas {
     position: relative;
     display: inline-block;
+    margin:50px;
 }
 
 #health-bar {

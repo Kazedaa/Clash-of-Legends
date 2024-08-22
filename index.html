@@ -17,30 +17,33 @@
 </head>
 <body>
     <audio autoplay="autoplay" loop="loop" src="./Assets/bg.mp3"></audio>
-    <div id = "game-canvas">
-        <!--Health Bar-->
-        <div id = "health-bar">
-            <!--Player Health-->
-            <div id = "health" style="border-right-width: 0px;"> <!--display:flex;justify-content: flex-end;-->
-                <div id = "inner-health"></div> <!--style="width:100%"-->
-                <div id = "playerHealth" style="position: absolute; background: rgb(212, 136, 212); top: 0; bottom: 0;right: 0;width:100%"></div>
+    <div id="heading" >Clash Of Legends</div>
+    <div id="game">
+        <div id = "game-canvas">
+            <!--Health Bar-->
+            <div id = "health-bar">
+                <!--Player Health-->
+                <div id = "health" style="border-right-width: 0px;"> <!--display:flex;justify-content: flex-end;-->
+                    <div id = "inner-health"></div> <!--style="width:100%"-->
+                    <div id = "playerHealth" style="position: absolute; background: rgb(212, 136, 212); top: 0; bottom: 0;right: 0;width:100%"></div>
+                </div>
+                <!--Timer-->
+                <div id ="timer"></div>
+                <!--Enemy Health-->
+                <div id = "health" style="border-left-width: 0px;">
+                    <div id = "inner-health"></div>
+                    <div id = "enemyHealth" style="position: absolute; background: rgb(212, 136, 212); top: 0; bottom: 0;right: 0;left: 0;"></div>
+                </div>
             </div>
-            <!--Timer-->
-            <div id ="timer"></div>
-            <!--Enemy Health-->
-            <div id = "health" style="border-left-width: 0px;">
-                <div id = "inner-health"></div>
-                <div id = "enemyHealth" style="position: absolute; background: rgb(212, 136, 212); top: 0; bottom: 0;right: 0;left: 0;"></div>
+            <div id = "char-icon" style = "left:380px;">
+                <img src = "./Assets/WindFighter/wind_hashashin.png">
             </div>
+            <div id = "char-icon" style="left:555px;">
+                <img src = "./Assets/MetalFighter/metal_bladekeeper.png">
+            </div>
+            <div id="gameOver"></div>
+            <canvas></canvas>
         </div>
-        <div id = "char-icon" style = "left:380px;">
-            <img src = "./Assets/WindFighter/wind_hashashin.png">
-        </div>
-        <div id = "char-icon" style="left:555px;">
-            <img src = "./Assets/MetalFighter/metal_bladekeeper.png">
-        </div>
-        <div id="gameOver"></div>
-        <canvas></canvas>
     </div>
 
     <!--GSAP for animation-->
